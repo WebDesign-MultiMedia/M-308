@@ -74,15 +74,94 @@ console.log(" ");
 
 
 // PART TWO
+console.log("========================");
+
 console.log("'PART TWO !!!'");
 console.log("'Cross-Country Road Trip!'");
+
+// DISTANCE TRIP
 let totalTripDistance = 1500;
 console.log("Distance for Road Trip : " + totalTripDistance + " miles");
+
+// 55 Miles Per Hours = 30 Miles Per Gallon
+let speed = 55; // 55 Miles per hours
+let mpgAt55mph = 30; // 30 Miles per gallon
+
+// 60 Miles Per Hours = 28 Miles Per Gallon
+let speedTwo = 60; // 50 Miles Per Hours
+let mpgAt60mph = 28; // 28 Miles Per Gallon
+
+// 75 Miles Per Hours = 23 Miles Per Gallon
+let speedThree = 75; // 75 Miles Per Hours
+let mpgAt75 = 23; // 23 Miles Per Gallon
+
+// BUDGET
 let fuelBudget = 175; //$175 budget
+
+// $3 Per Gallon
 let avrgCostOfFuelPerGallon = 3; //$3 per gallon 
+console.log(" ");
 
-/** */
 
+// How many gallons of fuel will you need for the entire trip?
+console.log("1) How many gallons of fuel will you need for the entire trip?");
+console.log("");
+
+    let gallonNeededAt55 =  totalTripDistance / mpgAt55mph;
+    console.log("Entire Trip : " + totalTripDistance + " Miles " +" @ 55 Miles Per Hour = " + mpgAt55mph + " Miles Per Gallon");
+    console.log(gallonNeededAt55 + " Gallons");
+    console.log(" ");
+    
+    let gallonNeedAt60 = totalTripDistance / mpgAt60mph;
+        console.log("Entire Trip : " + totalTripDistance + " Miles @ " + speedTwo +" Miles Per Hour = " + mpgAt60mph + " Miles Per Gallon");
+    console.log(gallonNeedAt60 + " Gallons");
+    console.log(" ");
+
+    let gallonNeedAt75 = totalTripDistance / mpgAt75;
+        console.log("Entire Trip : " + totalTripDistance + " Miles @ " + speedThree + " Miles Per Hpur = " + mpgAt75 + " Miles Per Gallon");
+    console.log(gallonNeedAt75 + " Gallons");
+console.log("=======================");
+console.log("");
+
+    
+// Will your budget be enough to cover the fuel expense?
+
+    console.log("2) Will your budget be enough to cover the fuel expense?");
+    console.log("");
+    
+    let fuelCost =  gallonNeededAt55 * avrgCostOfFuelPerGallon;
+    let CoverFuelExpense = fuelCost < fuelBudget;
+    console.log("My Fuel Budget is : " + fuelBudget);
+    console.log("");
+    console.log("Fuel Cost : " + fuelCost);
+    console.log( CoverFuelExpense + ": , Budget is enough.");
+    console.log("");
+    
+    let fuelCostTwo = gallonNeedAt60 * avrgCostOfFuelPerGallon;
+    let CoverFuelExpenseTwo =  fuelCostTwo < fuelBudget;
+    console.log("Fuel Cost : " + fuelCostTwo);
+    console.log(CoverFuelExpenseTwo + " : , Budgte is enough. ");
+    console.log("");
+    
+    let fuelCostThree = gallonNeedAt75 * avrgCostOfFuelPerGallon;
+    let CoverFuelExpenseThree = fuelCostThree < fuelBudget;
+    console.log("Fuel Cost : " + fuelCostThree);
+    console.log(CoverFuelExpenseThree+ " : , Budgte is not enough. ");
+    console.log("");
+
+// How long will the trip take, in hours?
+
+    console.log("How long will the trip take, in hours?");
+    function time(totlaDistance, averageSpeed) {
+        let hour = totlaDistance / averageSpeed;
+        return hour ;
+        ;
+    }
+    console.log(time(totalTripDistance, speed) + " hours @ " + speed + " mph" );
+    console.log(time(totalTripDistance, speedTwo) + " hours @ " + speedTwo + " mph");
+    console.log(time(totalTripDistance, speedThree) + " hours @ " + speedThree + " mph");
+
+    
 
 
  
